@@ -1,0 +1,6 @@
+kafe x 5
+patiki x 2
+kebapi x 20
+telefon x 1
+resana x 4
+sok
