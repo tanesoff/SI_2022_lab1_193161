@@ -1,0 +1,246 @@
+1)	tanev@DESKTOP-FSG1RJ1 MINGW64 ~/Desktop/SI_2022_lab1_193161 (master)
+	$git init
+	Initialized empty Git repository in C:/Users/tanev/Desktop/SI_2022_lab1_193161/.git/
+иницијализирање на локален git репозиториум
+
+2)tanev@DESKTOP-FSG1RJ1 MINGW64 ~/Desktop/SI_2022_lab1_193161 (master)
+	$ git remote add origin git@github.com:tanesoff/SI_2022_lab1_193161.git~  
+Поврзување со репозиториум
+
+
+2.1)tanev@DESKTOP-FSG1RJ1 MINGW64 ~/Desktop/SI_2022_lab1_193161 (master)
+	$ git status
+	On branch master
+	No commits yet
+	nothing to commit (create/copy files and use "git add" to track)
+-проверка на статусот на мастер
+
+
+3) tanev@DESKTOP-FSG1RJ1 MINGW64 ~/Desktop/SI_2022_lab1_193161 (master)
+   $ git pull origin master
+   remote: Enumerating objects: 6, done.
+   remote: Counting objects: 100% (6/6), done.
+   remote: Compressing objects: 100% (2/2), done.
+   remote: Total 6 (delta 0), reused 0 (delta 0), pack-reused 0
+   Unpacking objects: 100% (6/6), 1.24 KiB | 2.00 KiB/s, done.
+   From git@github.com:tanesoff/SI_2022_lab1_193161.git~
+ * branch            master     -> FETCH_HEAD
+ * [new branch]      master     -> origin/master
+-повлекување на извршените промени во оддалечениот репозиториум локално
+
+4) tanev@DESKTOP-FSG1RJ1 MINGW64 ~/Desktop/SI_2022_lab1_193161 (master)
+   $ git add shopping_list.txt
+-додавање на датотека во tracking
+
+5) tanev@DESKTOP-FSG1RJ1 MINGW64 ~/Desktop/SI_2022_lab1_193161 (master)
+   $ git commit -m "Add 5 items to the shopping list"
+   [master 06ff8e9] Add 5 items to the shopping list
+   1 file changed, 0 insertions(+), 0 deletions(-)
+   create mode 100644 shopping_list.txt
+-креирање на commit со порака
+
+6) tanev@DESKTOP-FSG1RJ1 MINGW64 ~/Desktop/SI_2022_lab1_193161 (master)
+   $ git commit -m "Add quantities to the items"
+   [master 6f6de03] Add quantities to the items
+   1 file changed, 5 insertions(+)
+-креирање на нов commit со порака
+
+7) tanev@DESKTOP-FSG1RJ1 MINGW64 ~/Desktop/SI_2022_lab1_193161 (master)
+   $ git branch branch1
+-креирање на гранка branch1
+  
+   tanev@DESKTOP-FSG1RJ1 MINGW64 ~/Desktop/SI_2022_lab1_193161 (master)
+   $ git branch branch2
+-креирање на гранка branch2
+
+9) tanev@DESKTOP-FSG1RJ1 MINGW64 ~/Desktop/SI_2022_lab1_193161 (master)
+   $ git push origin master
+   Enumerating objects: 7, done.
+   Counting objects: 100% (7/7), done.
+   Delta compression using up to 4 threads
+   Compressing objects: 100% (5/5), done.
+   Writing objects: 100% (6/6), 620 bytes | 103.00 KiB/s, done.
+   Total 6 (delta 0), reused 0 (delta 0), pack-reused 0
+   To git@github.com:tanesoff/SI_2022_lab1_193161.git~
+   834f6ef..6f6de03  master -> master
+-синхронизација на гранката master со оддалечениот репозиториум
+
+   tanev@DESKTOP-FSG1RJ1 MINGW64 ~/Desktop/SI_2022_lab1_193161 (master)
+   $ git checkout branch1
+   Switched to branch 'branch1'
+-префрлување на гранка branch1
+
+   tanev@DESKTOP-FSG1RJ1 MINGW64 ~/Desktop/SI_2022_lab1_193161 (master)
+   $ git push origin branch1
+   Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+   remote:
+   remote: Create a pull request for 'branch1' on GitHub by visiting:
+   remote: https://github.com/tanesoff/SI_2022_lab1_193161/pull/new/branch1
+   remote:
+   To git@github.com:tanesoff/SI_2022_lab1_193161.git~
+   * [new branch]      branch1 -> branch1
+-синхронизација на гранката branch1 со оддалечениот репозиториум
+
+   tanev@DESKTOP-FSG1RJ1 MINGW64 ~/Desktop/SI_2022_lab1_193161 (branch1)
+   $ git checkout branch2
+   Switched to branch 'branch2'
+-префрлување на гранка branch2
+
+   tanev@DESKTOP-FSG1RJ1 MINGW64 ~/Desktop/SI_2022_lab1_193161 (branch2)
+   $ git push origin branch2
+   Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+   remote:
+   remote: Create a pull request for 'branch2' on GitHub by visiting:
+   remote: https://github.com/tanesoff/SI_2022_lab1_193161/pull/new/branch2
+   remote:
+   To git@github.com:tanesoff/SI_2022_lab1_193161.git~
+   * [new branch]      branch2 -> branch2
+-синхронизација на гранката branch2 со оддалечениот репозиториум
+
+10) tanev@DESKTOP-FSG1RJ1 MINGW64 ~/Desktop/SI_2022_lab1_193161 (branch2)
+    $ git checkout branch1
+    Switched to branch 'branch1'
+-префрлување во гранка branch1
+
+11) tanev@DESKTOP-FSG1RJ1 MINGW64 ~/Desktop/SI_2022_lab1_193161 (branch1)
+    $ git commit -m "Change quantity of item #5"
+    [branch1 33a8b25] Change quantity of item #5
+    1 file changed, 1 insertion(+), 1 deletion(-)
+-креирање commit со коментар
+
+12) tanev@DESKTOP-FSG1RJ1 MINGW64 ~/Desktop/SI_2022_lab1_193161 (branch1)
+    $ git checkout master
+    Switched to branch 'master'
+-враќање во гранката master
+
+13) tanev@DESKTOP-FSG1RJ1 MINGW64 ~/Desktop/SI_2022_lab1_193161 (master)
+    $ git commit -m "Change quantity of item #2"
+    [master 70e0b61] Change quantity of item #2
+    1 file changed, 1 insertion(+), 1 deletion(-)
+-креирање commit со коментар
+
+14) tanev@DESKTOP-FSG1RJ1 MINGW64 ~/Desktop/SI_2022_lab1_193161 (master)
+    $ git push origin master
+    Enumerating objects: 5, done.
+    Counting objects: 100% (5/5), done.
+    Delta compression using up to 4 threads
+    Compressing objects: 100% (3/3), done.
+    Writing objects: 100% (3/3), 351 bytes | 175.00 KiB/s, done.
+    Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+    To git@github.com:tanesoff/SI_2022_lab1_193161.git~
+    6f6de03..70e0b61  master -> master
+-синхронизација на гранката master со оддалечениот репозиториум
+
+    tanev@DESKTOP-FSG1RJ1 MINGW64 ~/Desktop/SI_2022_lab1_193161 (master)
+    $ git checkout branch1
+    Switched to branch 'branch1'
+-префрлување во гранка branch1
+
+    tanev@DESKTOP-FSG1RJ1 MINGW64 ~/Desktop/SI_2022_lab1_193161 (branch1)
+    $ git push origin branch1
+    Enumerating objects: 5, done.
+    Counting objects: 100% (5/5), done.
+    Delta compression using up to 4 threads
+    Compressing objects: 100% (3/3), done.
+    Writing objects: 100% (3/3), 335 bytes | 167.00 KiB/s, done.
+    Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+    remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+    To git@github.com:tanesoff/SI_2022_lab1_193161.git~
+    6f6de03..33a8b25  branch1 -> branch1
+-синхронизација на гранката branch1 со оддалечениот репозиториум
+
+    tanev@DESKTOP-FSG1RJ1 MINGW64 ~/Desktop/SI_2022_lab1_193161 (branch1)
+    $ git checkout branch2
+    Switched to branch 'branch2'
+-префрлување во гранката branch2
+
+    tanev@DESKTOP-FSG1RJ1 MINGW64 ~/Desktop/SI_2022_lab1_193161 (branch2)
+    $ git push origin branch2
+    Everything up-to-date
+-синхронизација на гранката branch2 со оддалечениот репозиториум
+
+16) tanev@DESKTOP-FSG1RJ1 MINGW64 ~/Desktop/SI_2022_lab1_193161 (branch2)
+    $ git commit -m "Modify item #4"
+    [branch2 9095d5f] Modify item #4
+    1 file changed, 1 insertion(+), 1 deletion(-)
+-креирање commit со коментар
+
+18) tanev@DESKTOP-FSG1RJ1 MINGW64 ~/Desktop/SI_2022_lab1_193161 (branch2)
+    $ git commit --amend -m "Modify item #4 and add item #6"
+    [branch2 0746be9] Modify item #4 and add item #6
+    Date: Sun Mar 27 21:21:41 2022 +0200
+    1 file changed, 3 insertions(+), 2 deletions(-)
+-промена на последниот commit
+
+20) tanev@DESKTOP-FSG1RJ1 MINGW64 ~/Desktop/SI_2022_lab1_193161 (branch2)
+    $ git checkout master
+    Switched to branch 'master'
+-префрлување во гранката master
+
+    tanev@DESKTOP-FSG1RJ1 MINGW64 ~/Desktop/SI_2022_lab1_193161 (master)
+    $ git merge branch1
+    Auto-merging shopping_list.txt
+    hint: Waiting for your editor to close the file... unix2dos: converting file E:/Fax/Softversko/lab/.git/MERGE_MSG to DOS format...
+    dos2unix: converting file E:/Fax/Softversko/lab/.git/MERGE_MSG to Unix format...
+    Merge made by the 'ort' strategy.
+    shopping_list.txt | 2 +-
+    1 file changed, 1 insertion(+), 1 deletion(-)
+-спојување на гранката branch1 со гранката master
+
+21) tanev@DESKTOP-FSG1RJ1 MINGW64 ~/Desktop/SI_2022_lab1_193161 (master)
+    $ git merge branch2
+    Auto-merging shopping_list.txt
+    CONFLICT (content): Merge conflict in shopping_list.txt
+    Automatic merge failed; fix conflicts and then commit the result.
+-спојување на гранката branch2 со гранката master
+
+    tanev@DESKTOP-FSG1RJ1 MINGW64 ~/Desktop/SI_2022_lab1_193161 (master|MERGING)
+    $ git commit -m "Conflicts fixed"
+    [master d9013ed] Conflicts fixed
+-креирање commit со коментар
+
+22) tanev@DESKTOP-FSG1RJ1 MINGW64 ~/Desktop/SI_2022_lab1_193161 (master)
+    $ git add 193161.txt
+-додавање на документацијата
+
+    tanev@DESKTOP-FSG1RJ1 MINGW64 ~/Desktop/SI_2022_lab1_193161 (master)
+    $ git commit -m "Add docs"
+    [master dddcf88] Add docs
+    1 file changed, 350 insertions(+)
+    create mode 100644 193161.txt
+-креирање commit со коментар
+
+23) tanev@DESKTOP-FSG1RJ1 MINGW64 ~/Desktop/SI_2022_lab1_193161 (master)
+    $ git push origin master
+    Enumerating objects: 18, done.
+    Counting objects: 100% (18/18), done.
+    Delta compression using up to 4 threads
+    Compressing objects: 100% (12/12), done.
+    Writing objects: 100% (12/12), 3.27 KiB | 1.09 MiB/s, done.
+    Total 12 (delta 1), reused 0 (delta 0), pack-reused 0
+    remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+    To git@github.com:tanesoff/SI_2022_lab1_193161.git~
+    70e0b61..dddcf88  master -> master
+-синхронизирање на гранката master со оддалечениот репозиториум
+
+   tanev@DESKTOP-FSG1RJ1 MINGW64 ~/Desktop/SI_2022_lab1_193161 (master)
+   $ git checkout branch1
+   Switched to branch 'branch1'
+-префрлување на гранката branch1
+
+   tanev@DESKTOP-FSG1RJ1 MINGW64 ~/Desktop/SI_2022_lab1_193161 (branch1)
+   $ git push origin branch1
+   Everything up-to-date
+-синхронизирање на гранката branch1 со оддалечениот репозиториум
+
+   tanev@DESKTOP-FSG1RJ1 MINGW64 ~/Desktop/SI_2022_lab1_193161 (branch1)
+   $ git checkout branch2
+   Switched to branch 'branch2'
+-префрлување на гранката branch2
+
+    tanev@DESKTOP-FSG1RJ1 MINGW64 ~/Desktop/SI_2022_lab1_193161 (branch2)
+    $ git push origin branch2
+    Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+    To git@github.com:tanesoff/SI_2022_lab1_193161.git~
+    6f6de03..0746be9  branch2 -> branch2
+-синхронизирање на гранката branch2 со оддалечениот репозиториум
